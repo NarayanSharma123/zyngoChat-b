@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const multer = require("multer");
-const cloudinary = require("cloudinary").v2;
+const cloudinary = require("cloudinary");
 const { CloudinaryStorage } = require("multer-storage-cloudinary");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
@@ -462,6 +462,7 @@ app.post("/api/logout", (req, res) => {
 
   return res.status(200).json({ message: "Logged out successfully" });
 });
+
 // Start server
 const PORT = process.env.PORT || 8000;
 server.listen(PORT, () => {
