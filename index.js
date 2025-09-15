@@ -464,8 +464,7 @@ app.post("/api/logout", (req, res) => {
 });
 
 // Start server
-// const PORT = process.env.PORT || 8000;
-// server.listen(PORT, () => {
-//   console.log(`Server running on port ${PORT}`);
-// });
-module.exports = app;
+const PORT = process.env.PORT || 8000;
+server.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
